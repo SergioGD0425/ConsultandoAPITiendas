@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/326662e86f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Tiendas</h1>
+    </header>
+    <main>
+        <section id="chooseMethod">
+            <h1>Elige un método para realizar AJAX:</h1>
+            <div class="botonera">
+                <label id="xhrButton" class="buttonRounded">XHR</label>
+                <label id="fetchButton" class="buttonRounded">Fetch</label>
+                <label id="jqueryButton" class="buttonRounded">Jquery</label>
+            </div>
+        </section>
+        <section id="errorPage">
+            <h1>La petición ha fracasado :(</h1>
+        </section>
+        <section id="loadingPage">
+            <i class="fas fa-spinner"></i>
+        </section>
+        <section id="paginaPeticion">
+            <section id="navegador">
+                <div id="opciones">
+                    <label id="nuevaTienda">Nueva Tienda</label>
+                    <div class="buscador">
+                        <input type="text" id="buscadorTienda" placeholder="Id de Tienda" />
+                        <div class="contenedorIcono" id="busquedaIndividual">
+                            <i class="fas fa-search searchicon" id="iconoBusqueda"></i>
+                        </div>
+                    </div>
+                </div>
+                <form id="formNuevatienda" method="POST" novalidate>
+                    <h1>Nueva Tienda</h1>
+                    <div class="inputs">
+                        <div>
+                            <label>Nombre</label>
+                            <input type="text" id="nombreInput" placeholder="Nombre de la tienda"required />
+                            <small hidden>Campo obligatorio</small>
+                        </div>
+                        <div>
+                            <label>Direccion</label>
+                            <input type="text" id="direccionInput" placeholder="Dirección de la tienda"required />
+                            <small hidden>Campo obligatorio</small>
+                        </div>
+                        <div>
+                            <label>Localidad</label>
+                            <input type="text" id="localidadInput" placeholder="Localidad de la tienda"required />
+                            <small hidden>Campo obligatorio</small>
+                        </div>
+                        <div>
+                            <label>Teléfono</label>
+                            <input type="text" id="telefonoInput" placeholder="Teléfono de la tienda" required pattern="^[6,8,9]\d{8}$"/>
+                            <small hidden>Campo obligatorio</small>
+                        </div>
+                    </div>
+                    <button id="anadirTiendaButton">Añadir tienda</button>
+                </form>
+            </section>
+            <div id="listaTiendas">
+
+            </div>
+        </section>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/scripts.js"></script>
+</body>
+
+</html>

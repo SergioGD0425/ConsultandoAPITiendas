@@ -1,0 +1,246 @@
+$primaryColor : green;
+
+* {
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100%;
+}
+
+main {
+    height: 100%;
+}
+
+header {
+    padding: 10px;
+    display: flex;
+    background-color: darkgreen;
+    color: orange;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#loadingPage {
+    background-color: lightgray;
+    color: darkgreen;
+    font-size: 100px;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    i {
+        animation-iteration-count: infinite;
+        animation-duration: 1.5s;
+        animation-timing-function: linear;
+        animation-name: giratorio;
+    }
+}
+
+@keyframes giratorio {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#paginaPeticion {
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+    display: none;
+    flex-direction: column;
+}
+
+#errorPage {
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: darkgreen;
+}
+
+#chooseMethod {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: darkgreen;
+}
+
+.buttonRounded {
+    text-align: center;
+    border-radius: 10px;
+    border: solid 2px green;
+    margin-bottom: 10px;
+    background-color: rgb(188, 229, 188);
+    padding-left: 100px;
+    padding-right: 100px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(138, 206, 138);
+    }
+
+    &:active {
+        background-color: rgb(41, 158, 41);
+    }
+
+}
+
+.botonera {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.nombreTienda {
+    color: darkgreen;
+}
+
+#navegador {
+    display: flex;
+    flex-direction: column;
+}
+
+#opciones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.buscador {
+    display: flex;
+    flex-direction: row;
+}
+
+.searchicon {
+    padding: 5px;
+    color: $primaryColor;
+}
+
+.contenedorIcono {
+    border: solid $primaryColor 2px;
+    border-radius: 5px;
+}
+
+.iconoAnimado {
+    animation-iteration-count: infinite;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-name: giratorio;
+}
+
+.searchicon:hover,
+#nuevaTienda:hover {
+    cursor: pointer;
+}
+
+#nuevaTienda {
+    align-self: center;
+    font-weight: bold;
+    color: darkgreen;
+}
+
+#buscadorTienda {
+    margin-right: 10px;
+
+    &:focus {
+        outline-color: $primaryColor;
+    }
+}
+
+
+
+.contenedorTienda {
+    box-shadow: 1px 1px 3px 1px green;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: solid $primaryColor 1px;
+
+    h1 {
+        color: darkgreen;
+    }
+}
+
+#formNuevatienda {
+    display: flex;
+    height: 0px;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    border: solid $primaryColor 0px;
+
+    &.animarNuevaTienda {
+        border: solid $primaryColor 2px;
+        padding: 15px;
+        height: 270px;
+    }
+
+    h1 {
+        color: green;
+    }
+}
+
+
+
+small {
+    color: red;
+}
+
+input {
+    border-color: 0;
+    outline: none;
+    border-width: 1px;
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 20px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+
+#anadirTiendaButton {
+    margin-top: 15px;
+    align-self: flex-end;
+    text-align: center;
+    border-radius: 10px;
+    border: solid 2px green;
+    margin-bottom: 10px;
+    background-color: rgb(188, 229, 188);
+    padding: 5px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(138, 206, 138);
+    }
+
+    &:active {
+        background-color: rgb(41, 158, 41);
+    }
+}
