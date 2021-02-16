@@ -38,6 +38,12 @@ telefonoInput.addEventListener("input", validarTelefono);
 var busquedaIndividualHecha = false;
 var nuevaTiendaAnimada = false;
 
+
+/**
+ * Valida el nombre del formulario comprobando si está relleno
+ *
+ * @return {*} Boolean
+ */
 function validarNombre() {
     resettext(nombreInput);
     if (nombreInput.validity.valueMissing) {
@@ -48,6 +54,11 @@ function validarNombre() {
     }
 }
 
+/**
+ * Valida la direccion del formulario comprobando si está relleno
+ *
+ * @return {*} Boolean
+ */
 function validarDireccion() {
     resettext(direccionInput);
     if (direccionInput.validity.valueMissing) {
@@ -58,6 +69,11 @@ function validarDireccion() {
     }
 }
 
+/**
+ * Valida la localidad del formulario comprobando si está relleno
+ *
+ * @return {*} Boolean
+ */
 function validarLocalidad() {
     resettext(localidadInput);
     if (localidadInput.validity.valueMissing) {

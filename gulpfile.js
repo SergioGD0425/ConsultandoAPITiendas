@@ -3,6 +3,8 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
+const jsdoc = require('gulp-jsdoc3');
+
  
 sass.compiler = require('node-sass');
  
@@ -13,8 +15,9 @@ gulp.task('sass', function () {
     .pipe(browserSync.stream());
 });
  
-gulp.task('sass:watch', function () {
-  gulp.watch('./css/*.scss', gulp.series(['sass']));
+gulp.task('doc', function (cb) {
+    gulp.src(['./js/*.js'], {read: false})
+        .pipe(jsdoc(cb));
 });
 
 gulp.task('serve', gulp.series(['sass'], function() {
@@ -26,6 +29,11 @@ gulp.task('serve', gulp.series(['sass'], function() {
     gulp.watch("./css/*.scss", gulp.series(['sass']));
     gulp.watch("./*.html").on('change', browserSync.reload);
     gulp.watch("./js/*.js").on('change', browserSync.reload);
+    gulp.watch("./js/*.js", gulp.series(['doc']));
 }));
 
+
 gulp.task('default', gulp.series(['serve']));
+
+
+ 
