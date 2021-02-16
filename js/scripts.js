@@ -138,7 +138,6 @@ function validarCampos(event) {
                 .catch(error => {
                     console.error('Error:', error)
                     estadoCargaBoton(false);
-
                 })
                 .then(response => {
                     console.log('Success:', response)

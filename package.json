@@ -1,0 +1,22 @@
+{
+  "name": "tiendasapi",
+  "version": "1.0.0",
+  "description": "Consulta de una api",
+  "main": "./js/scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergioGD0425/ConsultandoAPITiendas.git"
+  },
+  "author": "Sergio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SergioGD0425/ConsultandoAPITiendas/issues"
+  },
+  "homepage": "https://github.com/SergioGD0425/ConsultandoAPITiendas#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
